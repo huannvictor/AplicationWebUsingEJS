@@ -7,6 +7,7 @@
     <main>
       <div class="jumbotron">
         <h1>Node com o EJS</h1>
+        <p><em> <%= subtitle %> </em></p>
         <p>vamos aprender a trabalhar com arquivos EJS</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rem
@@ -21,6 +22,11 @@
           officia eum maxime!
         </p>
       </div>
+      <ul>
+        <% qualities.forEach(function(quality){ %>
+        <li><strong><%= quality.title %></strong><%= quality.message %></li>
+        <% }) %>
+      </ul>
     </main>
     <%- include('../layout/footer'); %>
   </body>
